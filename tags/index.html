@@ -283,10 +283,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                19 tags in total
+                20 tags in total
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/CNN/" style="font-size: 12px; color: #ccc">CNN</a> <a href="/tags/Capsule-Net/" style="font-size: 12px; color: #ccc">Capsule Net</a> <a href="/tags/Cross-Domain-Learning/" style="font-size: 12px; color: #ccc">Cross Domain Learning</a> <a href="/tags/Deep-Learning/" style="font-size: 12px; color: #ccc">Deep Learning</a> <a href="/tags/GAN/" style="font-size: 30px; color: #111">GAN</a> <a href="/tags/ICML/" style="font-size: 12px; color: #ccc">ICML</a> <a href="/tags/Image-Translation/" style="font-size: 12px; color: #ccc">Image Translation</a> <a href="/tags/Latex/" style="font-size: 12px; color: #ccc">Latex</a> <a href="/tags/NPLM/" style="font-size: 12px; color: #ccc">NPLM</a> <a href="/tags/WebGL/" style="font-size: 12px; color: #ccc">WebGL</a> <a href="/tags/World2vec/" style="font-size: 12px; color: #ccc">World2vec</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ccc">markdown</a> <a href="/tags/prolog/" style="font-size: 12px; color: #ccc">prolog</a> <a href="/tags/专家系统/" style="font-size: 12px; color: #ccc">专家系统</a> <a href="/tags/基因算法/" style="font-size: 12px; color: #ccc">基因算法</a> <a href="/tags/旅行商问题/" style="font-size: 12px; color: #ccc">旅行商问题</a> <a href="/tags/背包问题/" style="font-size: 12px; color: #ccc">背包问题</a> <a href="/tags/词向量/" style="font-size: 12px; color: #ccc">词向量</a> <a href="/tags/读书笔记，统计学习，基础知识/" style="font-size: 12px; color: #ccc">读书笔记，统计学习，基础知识</a>
+              <a href="/tags/CNN/" style="font-size: 12px; color: #ccc">CNN</a> <a href="/tags/Capsule-Net/" style="font-size: 12px; color: #ccc">Capsule Net</a> <a href="/tags/Cross-Domain-Learning/" style="font-size: 12px; color: #ccc">Cross Domain Learning</a> <a href="/tags/Deep-Learning/" style="font-size: 12px; color: #ccc">Deep Learning</a> <a href="/tags/GAN/" style="font-size: 30px; color: #111">GAN</a> <a href="/tags/ICML/" style="font-size: 12px; color: #ccc">ICML</a> <a href="/tags/Image-Translation/" style="font-size: 12px; color: #ccc">Image Translation</a> <a href="/tags/Latex/" style="font-size: 12px; color: #ccc">Latex</a> <a href="/tags/NPLM/" style="font-size: 12px; color: #ccc">NPLM</a> <a href="/tags/WebGL/" style="font-size: 12px; color: #ccc">WebGL</a> <a href="/tags/World2vec/" style="font-size: 12px; color: #ccc">World2vec</a> <a href="/tags/markdown/" style="font-size: 12px; color: #ccc">markdown</a> <a href="/tags/prolog/" style="font-size: 12px; color: #ccc">prolog</a> <a href="/tags/专家系统/" style="font-size: 12px; color: #ccc">专家系统</a> <a href="/tags/基因算法/" style="font-size: 12px; color: #ccc">基因算法</a> <a href="/tags/旅行商问题/" style="font-size: 12px; color: #ccc">旅行商问题</a> <a href="/tags/统计学习/" style="font-size: 12px; color: #ccc">统计学习</a> <a href="/tags/背包问题/" style="font-size: 12px; color: #ccc">背包问题</a> <a href="/tags/词向量/" style="font-size: 12px; color: #ccc">词向量</a>
             </div>
           </div>
         
@@ -359,7 +359,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -556,14 +556,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://n4a-github-io.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -579,12 +571,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: '1rqtaYkCCLXGS6RQtruMohER-gzGzoHsz',
+        appKey: 'zzD19hKziE9WJaUsI3RN2RzB',
+        placeholder: 'Just go go',
+        avatar:'wavatar',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
