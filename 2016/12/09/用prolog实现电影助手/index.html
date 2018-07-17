@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="prolog,专家系统," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、选题说明选题背景我原来想做旅游助手，感觉比较实用，而且因为现在POI推荐挺火，找数据集应该不是很难。可惜找到的数据集都是英文地点，测试友好度就不行（比如我想做一个猜你所想的功能，要怎么测啊）。转做电影助手，找到的整理好的数据集也是英文的，像是movielen的1M和10M数据集。但是，后来我找到豆瓣电影排行榜250。如下：  数据来源根据以上叙述，我的数据都来自豆瓣了。原来设想用API来请求的">
+<meta name="keywords" content="prolog,专家系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用prolog实现电影助手">
+<meta property="og:url" content="http://yoursite.com/2016/12/09/用prolog实现电影助手/index.html">
+<meta property="og:site_name" content="N4A Space">
+<meta property="og:description" content="一、选题说明选题背景我原来想做旅游助手，感觉比较实用，而且因为现在POI推荐挺火，找数据集应该不是很难。可惜找到的数据集都是英文地点，测试友好度就不行（比如我想做一个猜你所想的功能，要怎么测啊）。转做电影助手，找到的整理好的数据集也是英文的，像是movielen的1M和10M数据集。但是，后来我找到豆瓣电影排行榜250。如下：  数据来源根据以上叙述，我的数据都来自豆瓣了。原来设想用API来请求的">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/img/douban250.PNG">
+<meta property="og:updated_time" content="2018-07-17T08:48:01.806Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用prolog实现电影助手">
+<meta name="twitter:description" content="一、选题说明选题背景我原来想做旅游助手，感觉比较实用，而且因为现在POI推荐挺火，找数据集应该不是很难。可惜找到的数据集都是英文地点，测试友好度就不行（比如我想做一个猜你所想的功能，要怎么测啊）。转做电影助手，找到的整理好的数据集也是英文的，像是movielen的1M和10M数据集。但是，后来我找到豆瓣电影排行榜250。如下：  数据来源根据以上叙述，我的数据都来自豆瓣了。原来设想用API来请求的">
+<meta name="twitter:image" content="http://yoursite.com/img/douban250.PNG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/12/09/用prolog实现电影助手/"/>
+
+
+
+
+
+  <title>用prolog实现电影助手 | N4A Space</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">N4A Space</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To explore and understand</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/09/用prolog实现电影助手/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N4A">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="N4A Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">用prolog实现电影助手</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-09T16:36:51+08:00">
+                2016-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/09/用prolog实现电影助手/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/12/09/用prolog实现电影助手/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="一、选题说明"><a href="#一、选题说明" class="headerlink" title="一、选题说明"></a>一、选题说明</h3><h4 id="选题背景"><a href="#选题背景" class="headerlink" title="选题背景"></a>选题背景</h4><p>我原来想做旅游助手，感觉比较实用，而且因为现在POI推荐挺火，找数据集应该不是很难。可惜找到的数据集都是英文地点，测试友好度就不行（比如我想做一个猜你所想的功能，要怎么测啊）。转做电影助手，找到的整理好的数据集也是英文的，像是movielen的1M和10M数据集。但是，后来我找到豆瓣电影排行榜250。如下：</p>
+<p><img src="/img/douban250.PNG" alt="豆瓣电影排行榜"></p>
+<h4 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h4><p>根据以上叙述，我的数据都来自豆瓣了。原来设想用API来请求的，但是现在不能用了。改用爬虫获取。现在我拥有250个条目（为经典电影），还了解到豆瓣电影也提供开放API，后期可以扩展近期热门电影，即将上映电影。这样的话就可以有一个较好的知识库。</p>
+<ol>
+<li><p>首先在排行榜上爬取电影的基本信息。</p>
+</li>
+<li><p>然后用获取到电影名，再通过豆瓣搜索功能，定为到这部电影，再获取它的简介。</p>
+</li>
+<li><p>数据模板：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">电影（名称，导演，主演，年代，国家，类型[list]，评分，热度，短评）</span><br><span class="line">电影（名称，简介）</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="功能设想"><a href="#功能设想" class="headerlink" title="功能设想"></a>功能设想</h4><ol>
+<li><strong>猜你所想</strong>：这个就和猜动物的功能是一样的，用户心中拟定一部电影，程序通过一系列问题，猜出这部电影。</li>
+<li><strong>荐你所想</strong>：用户有自己的喜好，但是又不能明确表述。程序通过问用户一些列问题来引导用户并分析用户所想，然后做出推荐。这对于选择综合症的用户来说是个不错的选择。</li>
+<li><strong>热门推荐</strong>：简单但是效果良好的推荐方法就是分析一下所有电影，然后给出热门好评电影列表。</li>
+<li><strong>电影查询</strong>：用户可能已经知道了一些电影。想要更进一步的了解电影信息。此时程序就可以从知识库中找到这些电影的信息然后展示给用户。</li>
+<li><strong>电影搜索</strong>：大多数情况下用户想要查一些电影，但是可能不是清除地知道电影名称。这时候用户可根据已有地信息来搜索。比如这是张国荣的电影或者这是一部美国电影等等。</li>
+</ol>
+<a id="more"></a>
+<h3 id="二、功能实现"><a href="#二、功能实现" class="headerlink" title="二、功能实现"></a>二、功能实现</h3><h4 id="猜你所想"><a href="#猜你所想" class="headerlink" title="猜你所想"></a>猜你所想</h4><p>这个是本软件的核心功能，也是最为复杂的功能。总体逻辑是通过问一些问一些问题，筛选出符合要求的电影列表，然后再问一些问题，直到电影列表收敛到只有一部或者没有电影输出结果。</p>
+<p>简要逻辑如下：</p>
+<ol>
+<li><p>确定电影制作国家和地区。这个采取的策略如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">% ask for area</span><br><span class="line">hypoth_area(&apos;中国大陆&apos;):-</span><br><span class="line">	asia,</span><br><span class="line">	verify(&apos;它是内地电影吗？&apos;).% ask for whether it is true or not.</span><br><span class="line">%omit some rules here</span><br><span class="line">hypoth_area(&apos;美国&apos;) :-</span><br><span class="line">	verify(&apos;它是美国电影吗？&apos;).</span><br><span class="line">hypoth_area(&apos;德国&apos;) :-</span><br><span class="line">	europe,</span><br><span class="line">	verify(&apos;它是德国电影吗？&apos;).</span><br><span class="line">%omit some rules here</span><br><span class="line">hypora_area(&apos;others&apos;)</span><br><span class="line"></span><br><span class="line">asia :-</span><br><span class="line">	verify(&apos;它是亚洲电影吗？&apos;).</span><br><span class="line">europe :- </span><br><span class="line">	verify(&apos;它是欧洲电影吗？&apos;).</span><br><span class="line">	</span><br><span class="line">% ask questions</span><br><span class="line">ask(Question) :-</span><br><span class="line">    write(Question),</span><br><span class="line">    write(&quot;y or n:&quot;),</span><br><span class="line">    read(Response),</span><br><span class="line">    ( (Response == y ; Response == yes)</span><br><span class="line">      -&gt;</span><br><span class="line">       assert(yes(Question)) ;</span><br><span class="line">       assert(no(Question)), fail).</span><br><span class="line"></span><br><span class="line">:- dynamic yes/1,no/1.</span><br><span class="line"></span><br><span class="line">% verify the question</span><br><span class="line">verify(S) :-</span><br><span class="line">   (</span><br><span class="line">   	yes(S) -&gt; true ;</span><br><span class="line">    (no(S) -&gt; fail; ask(S))%no -&gt; stop and back trace</span><br><span class="line">    ).</span><br></pre></td></tr></table></figure>
+<p>这种设计思路来源于cmu网站上关于猜动物实现的教程（7个动物）。其基本上就是一个个假设匹配，使用动态插入语句，问过的问题被记为事实。理论上可以将所有电影按这种思路实现，但是由于数据量大，人工设计这种格式工程量大，而且不易扩展，若是增加电影，原分类可能不能解决，又要重新分类。而且规则类型单一，规则数计算也有危险。所以分而治之，部分相对不会变的属性，采用这种策略，例如国家地区、时间、名字长度。</p>
+</li>
+<li><p>确定时间范围，方法同上。这层筛选后，会检查是否收敛，不收敛再继续。</p>
+</li>
+<li><p>确定名字长度范围，同上。（即使加入新的电影，以上这些属性区间也不会改变，所以加电影时，不需修改规则。）</p>
+</li>
+<li><p>这时候收敛的差不多了，可以用电影类型来询问。一开始电影类型有几十种，不适合问，但现在电影类型就很少了。统计剩下的电影类型（即使后期加电影，引入新类型，也会被统计到）。然后随机选一个来问一下（暂时没有择优选取），筛选出剩下的电影列表，检查是否收敛。然后再重新统计，去掉问过的属性，再筛选，检查是否收敛。重复直至类型都问过，还有多部电影，跳到下一步。具体如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">%use the type of the movie to distiguish</span><br><span class="line">type_simply(All,Types,Checked,Lefts):-</span><br><span class="line">	nth0(0,Types,Type),</span><br><span class="line">	(</span><br><span class="line">		(</span><br><span class="line">			verify(&apos;它是&apos;-Type-&apos;片吗？&apos;),undo,</span><br><span class="line">			select_type(Type,All,[],Left)		</span><br><span class="line">		);</span><br><span class="line">		(</span><br><span class="line">			delete_type(Type,All,[],Left)	</span><br><span class="line">		)</span><br><span class="line">		),</span><br><span class="line">	(</span><br><span class="line">		(</span><br><span class="line">			check_lens(Left),</span><br><span class="line">			Lefts = Left%exit the recursion</span><br><span class="line">		);</span><br><span class="line">		(</span><br><span class="line">			allType(Left,[],Newtypes),</span><br><span class="line">			append(Checked,[Type],New),</span><br><span class="line">			delete_checked(Newtypes,New,Lefttypes),</span><br><span class="line">			</span><br><span class="line">			length(Lefttypes,Len),</span><br><span class="line">			((</span><br><span class="line">				Len &gt; 0,</span><br><span class="line">				type_simply(Left,Lefttypes,New,Lefts)</span><br><span class="line">			);</span><br><span class="line">			(</span><br><span class="line">				Lefts = Left% exit the recursion</span><br><span class="line">			))	</span><br><span class="line">		)</span><br><span class="line">	).</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后根据导演和主演来筛选方法同上。</p>
+</li>
+<li><p>尚存问题：</p>
+<ol>
+<li>如果两部在数据集内的电影除名称外都相同，就区分不出，此时采取打出剩余列表的方法。不采用选一个打出来的方法。</li>
+<li>如果用户恰好想的是数据集不存在的电影，则可能收敛到一部相近电影，或者收敛到没有这部电影。</li>
+</ol>
+</li>
+</ol>
+<h4 id="荐你所想"><a href="#荐你所想" class="headerlink" title="荐你所想"></a>荐你所想</h4><p>这个功能针对于用户想看电影，但又不是电影专家，对电影不是很了解。此时程序当通过一些问题，来分析用户可能喜欢的电影。注意用户是不会选电影，也不能问过于专业的术语，比如导演风格，电影类型啊。我们要将问题转化，这也是难点所在。比如询问观影者是男生还是女生，获得此信息后就可以推荐性别偏向的电影。</p>
+<p>然后考察实现逻辑。猜动物是个筛选过程，但是推荐则不然，这是一个打分过程。因为用户可能对科技不是很感兴趣，但是有一部电影又满足了用户的其它需求，任然是要推给用户的。所以采用打分逻辑可以解决这一问题。</p>
+<p>简要逻辑如下：</p>
+<ol>
+<li><p>询问性别，性别是一个好问题，它一般很影响用户口味。如果是男生，那么动作类，冒险类电影就要加一点分。如果是女生爱情片，韩剧就要加一点分。</p>
+</li>
+<li><p>询问场景,如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">%场景处理，获得场景	</span><br><span class="line">get_scene(Scene):-</span><br><span class="line">	write(&apos;请选择如下场景之一：&apos;),nl,</span><br><span class="line">	write(&apos;1. 和家人一起看.&apos;),nl,</span><br><span class="line">	write(&apos;2. 和朋友一起看.&apos;),nl,</span><br><span class="line">	(</span><br><span class="line">		(</span><br><span class="line">			boy,</span><br><span class="line">			write(&apos;3. 和女朋友一起看.&apos;),nl</span><br><span class="line">		);</span><br><span class="line">		write(&apos;3. 和男朋友一起看.&apos;),nl</span><br><span class="line">	),</span><br><span class="line">	write(&apos;4. 自己一个人看.&apos;),nl,</span><br><span class="line">	read(Res),</span><br><span class="line">	(</span><br><span class="line">		(</span><br><span class="line">			int(Res),</span><br><span class="line">			Scene = Res</span><br><span class="line">		);</span><br><span class="line">		get_scene(Scene)</span><br><span class="line">	).</span><br></pre></td></tr></table></figure>
+<p>用户到底是和哪些人看电影也是很影响的，比如一家人看电影，那家庭剧，动画就要加分；情侣看电影，爱情剧就要加分；一个人看的话，就要把那些虐狗剧减去一些分；好友一起看就没有太大特色。</p>
+</li>
+<li><p>询问用户口味。用户口味设置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">% 你现在心情好吗</span><br><span class="line">% 喜欢听音乐吗</span><br><span class="line">% 你喜欢刺激吗</span><br><span class="line">% 胆子大吗</span><br><span class="line">% 是技术控吗</span><br><span class="line">% 是怀旧派吗？</span><br><span class="line">% 喜欢推理吗？</span><br><span class="line">% 是美剧党吗</span><br></pre></td></tr></table></figure>
+<p>用户心情若是不好，喜剧片就要加一些分。其它也是要按照同样的方式处理。加分或减分。详见代码。</p>
+</li>
+<li><p>所有问题都会被问完，问完之后每部电影都有自己的分数。然后还需要考虑电影基本质量，然后排序，取出前几位输出作为推荐。如果数据量很大，问题很多，在过程中也可以丢掉靠后电影，以加快性能。</p>
+</li>
+</ol>
+<h4 id="热门推荐"><a href="#热门推荐" class="headerlink" title="热门推荐"></a>热门推荐</h4><p>以上功能，虽然很个性化，也更好的捕捉到用户口味。但是操作复杂，过程繁琐。有一个简单有有效的方法就是热门高分推荐，也是各大平台真正使用的方法。</p>
+<p>实现热门推荐，就要考虑电影哪些属性可以反映这是一部热门好电影。考虑一下自然是评分和参与人数。这些数据可以从豆瓣上获取。</p>
+<p>简要逻辑如下：</p>
+<ol>
+<li>为每一部电影这和上述属性做出数字评分。</li>
+<li>排序，然后输出指定数量的热门好电影。</li>
+</ol>
+<h4 id="电影查询"><a href="#电影查询" class="headerlink" title="电影查询"></a>电影查询</h4><p>这是最常见的功能了，用户知道了某部电影，想要了解其详细信息，就可以使用此功能获取电影详细信息。</p>
+<p>简要逻辑如下：</p>
+<ol>
+<li>用prolog来实现匹配，匹配到输出电影的详细信息。这规则没有难度，主要是电影详细信息收集的问题。</li>
+</ol>
+<h4 id="电影搜索"><a href="#电影搜索" class="headerlink" title="电影搜索"></a>电影搜索</h4><p>​    大多数情况下用户想要查一些电影，但是可能不是清除地知道电影名称。这时候用户可根据已有的信息来搜索。比如这是张国荣的电影或者这是一部美国电影等等。</p>
+<p>简要逻辑如下：</p>
+<ol>
+<li>对于电影的所有属性，都用关键字去匹配，这里利用prolog回溯打出所有符合条件的电影</li>
+<li>由于搜索内容较多，只输出简略信息。详细信息可用电影查询来获取。</li>
+</ol>
+<h3 id="三、使用说明"><a href="#三、使用说明" class="headerlink" title="三、使用说明"></a>三、使用说明</h3><h4 id="所需环境"><a href="#所需环境" class="headerlink" title="所需环境"></a>所需环境</h4><p>开发是使用swi-prolog，需要中文支持，中文支持的编码为：UTF8+BOM。如果遇到问题可以查看文件的编码是否被修改。</p>
+<h4 id="启动程序"><a href="#启动程序" class="headerlink" title="启动程序"></a>启动程序</h4><p>使用swi-prolog加载<strong>load.pl</strong>文件即可。</p>
+<h4 id="程序助手"><a href="#程序助手" class="headerlink" title="程序助手"></a>程序助手</h4><p>启动程序后，输入<strong>hp</strong>即可查看帮助信息。对应内容如下：</p>
+<ol>
+<li>hp: 打开帮助信息。</li>
+<li>guess: 开始猜你所想的小游戏，你在心中拟定一部电影，然后程序通过一系列问题来猜出这部电影。</li>
+<li>guide: 打开荐你所想的功能，不要纠结不会选电影，该看什么电影了，打开它就会引导你，并给出推荐列表。</li>
+<li>hot: 显示当前热门电影，默认为3部。</li>
+<li>hot(Num): 显示当前热门电影，Num 指定要显示的电影数目。</li>
+<li>show(Name): 查询电影名称为Name的电影信息，Name必须是电影名称，展示详细信息。</li>
+<li>search(Key): 显示与Key匹配的电影列表，Key可为导演，主演，电影名，类型，评分等信息，返回匹配列表。</li>
+</ol>
+<h3 id="四、其它开发问题及经验"><a href="#四、其它开发问题及经验" class="headerlink" title="四、其它开发问题及经验"></a>四、其它开发问题及经验</h3><ol>
+<li>prolog原子不能以数字开头，一般语言都有的，不要忘了。</li>
+<li>prolog的异常捕捉。</li>
+<li>swi-prolog windows平台下自带的gui debug工具的使用，好工具，配合eclipse PDT插件使用也很搭。</li>
+<li>一般问题都可以在<strong>stackoverflow</strong>上找到解答。</li>
+<li>中文支持编码格式：UTF8 + BOM. 这样之后注释还是有一些小问题，但可以跑了。</li>
+<li>prolog的逻辑和java，C++不同，不推荐使用分号，前期很多代码都大量使用或并混合逻辑（if else逻辑），难读，代码复杂。这虽扣紧了消解原理，但没有很好利用回溯功能。建议将或的逻辑尽量拆成两条规则，prolog有回溯机制，这样使得代码简洁易读，易维护。比如prolog递归，应将终止条件写成一条独立的rule。</li>
+<li>注意使用prolog module。</li>
+<li>猜电影时，问题要有动态性，不能问所有的问题，要控制收敛，对于不同电影问题不能都一样。</li>
+<li>推荐电影时，不能问过于专业的问题。</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/prolog/" rel="tag"># prolog</a>
+          
+            <a href="/tags/专家系统/" rel="tag"># 专家系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/13/WebGL实实践-实现一个简单的3D漫游场景/" rel="prev" title="WebGL实践_实现一个简单的3D漫游场景">
+                WebGL实践_实现一个简单的3D漫游场景 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">N4A</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、选题说明"><span class="nav-number">1.</span> <span class="nav-text">一、选题说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#选题背景"><span class="nav-number">1.1.</span> <span class="nav-text">选题背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据来源"><span class="nav-number">1.2.</span> <span class="nav-text">数据来源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#功能设想"><span class="nav-number">1.3.</span> <span class="nav-text">功能设想</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、功能实现"><span class="nav-number">2.</span> <span class="nav-text">二、功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#猜你所想"><span class="nav-number">2.1.</span> <span class="nav-text">猜你所想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#荐你所想"><span class="nav-number">2.2.</span> <span class="nav-text">荐你所想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#热门推荐"><span class="nav-number">2.3.</span> <span class="nav-text">热门推荐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电影查询"><span class="nav-number">2.4.</span> <span class="nav-text">电影查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#电影搜索"><span class="nav-number">2.5.</span> <span class="nav-text">电影搜索</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、使用说明"><span class="nav-number">3.</span> <span class="nav-text">三、使用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#所需环境"><span class="nav-number">3.1.</span> <span class="nav-text">所需环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动程序"><span class="nav-number">3.2.</span> <span class="nav-text">启动程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#程序助手"><span class="nav-number">3.3.</span> <span class="nav-text">程序助手</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、其它开发问题及经验"><span class="nav-number">4.</span> <span class="nav-text">四、其它开发问题及经验</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">N4A</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://n4a-github-io.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/12/09/用prolog实现电影助手/';
+          this.page.identifier = '2016/12/09/用prolog实现电影助手/';
+          this.page.title = '用prolog实现电影助手';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://n4a-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

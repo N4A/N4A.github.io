@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>3DWalker</title>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="MyVector3.js"></script>
+	<script src="scene.js"></script>
+	<script src="objLoader.js"></script>
+    <script src="index.js"></script>
+    <script src="webGL.js"></script>
+    <script src="keyEvent.js"></script>
+    <script src="animation.js"></script>
+    <script src="objdrawer.js"></script>
+    <script src="shadow.js"></script>
+  </head>
+
+  <body onload="main()">
+	<canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+	<p id="messageBox">Debug Message</p>
+	<div> 
+		<h2> WebGL实践样例</h2>
+		<a href="/2016/12/13/WebGL实实践-实现一个简单的3D漫游场景/">返回博文</a>
+		<h2> 操作方法 </h2>
+		<ol>
+			<li>W,A,S,D : 分别控制前后左右移动，漫游场景。</li>
+			<li>J,L,I,K : 分别控制向左，向右，向上，向下转动视角。</li>
+			<li>F : 打开眼睛所在位置的点光源，照亮眼前事物，同时会照亮模型和贴图。</li>
+			<li>以上按键部分同时按为部分组合效果。</li>
+		</ol>
+		<h2> 源代码</h2>
+		<p> 打开浏览器控制台，从 Source 面板下自行下载</p>
+	</div>
+  </body>
+</html>
