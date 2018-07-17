@@ -142,6 +142,23 @@
       
     </entry>
     
+    <entry>
+      <title>使用 Typora 编辑文档</title>
+      <link href="/2016/10/30/%E4%BD%BF%E7%94%A8Typora%E7%BC%96%E8%BE%91%E6%96%87%E6%A1%A3/"/>
+      <url>/2016/10/30/%E4%BD%BF%E7%94%A8Typora%E7%BC%96%E8%BE%91%E6%96%87%E6%A1%A3/</url>
+      <content type="html"><![CDATA[<p>Typora是一款简约但功能强大文档编辑工具，支持导出pdf，md，html等多种格式文本，支持markdown语法和LaTex数学表达式语法。这里着重介绍LaTex的语法。参考<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference/5044%20MathJax%20basic%20tutorial%20and%20quick%20reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><ol><li>行内表达式写在<strong>\$…\$</strong>之间，行间表达式写在<strong>\$\$…\$\$</strong>之间。</li><li>使用<strong>\</strong>表示转义，例如结合前面的行内表达式可得<strong>\$\alpha \in A\$</strong>表示<strong>$\alpha \in A$</strong></li><li>行间表达式<strong>\$\$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\$\$</strong>表示<br>$$<br>\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} \tag {1}<br>$$</li></ol><a id="more"></a><h3 id="其它表达式"><a href="#其它表达式" class="headerlink" title="其它表达式"></a>其它表达式</h3><p>在表达式上右键可查看语法等信息</p><p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\<br>\end{vmatrix} \tag{2}<br>$$</p><p>$$<br>\begin{align}<br>\sqrt{37} &amp; = \sqrt{\frac{73^2-1}{12^2}} \\<br>&amp; = \sqrt{\frac{73^2}{12^2}\cdot\frac{73^2-1}{73^2}} \\ \\<br>&amp; = \sqrt{\frac{73^2}{12^2}}\sqrt{\frac{73^2-1}{73^2}} \\<br>&amp; = \frac{73}{12}\sqrt{1 - \frac{1}{73^2}} \\ \\<br>&amp; \approx \frac{73}{12}\left(1 - \frac{1}{2\cdot73^2}\right)<br>\end{align} \tag{3}<br>$$</p><p>$$<br>\begin{array}{c|lcr}<br>n &amp; \text{Left} &amp; \text{Center} &amp; \text{Right} \\<br>\hline<br>1 &amp; 0.24 &amp; 1 &amp; 125 \\<br>2 &amp; -1 &amp; 189 &amp; -8 \\<br>3 &amp; -20 &amp; 2000 &amp; 1+10i<br>\end{array} \tag{5}<br>$$</p><p>$$<br>% outer vertical array of arrays<br>\begin{array}{c}<br>% inner horizontal array of arrays<br>\begin{array}{cc}<br>% inner array of minimum values<br>\begin{array}{c|cccc}<br>\text{min} &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>\hline<br>0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\<br>1 &amp; 0 &amp; 1 &amp; 1 &amp; 1\\<br>2 &amp; 0 &amp; 1 &amp; 2 &amp; 2\\<br>3 &amp; 0 &amp; 1 &amp; 2 &amp; 3<br>\end{array}<br>&amp;<br>% inner array of maximum values<br>\begin{array}{c|cccc}<br>\text{max}&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 1 &amp; 2 &amp; 3\\<br>2 &amp; 2 &amp; 2 &amp; 2 &amp; 3\\<br>3 &amp; 3 &amp; 3 &amp; 3 &amp; 3<br>\end{array}<br>\end{array}<br>\\<br>% inner array of delta values<br>\begin{array}{c|cccc}<br>\Delta&amp;0&amp;1&amp;2&amp;3\\<br>\hline<br>0 &amp; 0 &amp; 1 &amp; 2 &amp; 3\\<br>1 &amp; 1 &amp; 0 &amp; 1 &amp; 2\\<br>2 &amp; 2 &amp; 1 &amp; 0 &amp; 1\\<br>3 &amp; 3 &amp; 2 &amp; 1 &amp; 0<br>\end{array}<br>\end{array} \tag{6}<br>$$</p><p>$$<br>\require{enclose}\begin{array}{rl}<br>\verb|\enclose{horizontalstrike}{x+y}| &amp; \enclose{horizontalstrike}{x+y}\\<br>\verb|\enclose{verticalstrike}{\frac xy}| &amp; \enclose{verticalstrike}{\frac xy}\\<br>\verb|\enclose{updiagonalstrike}{x+y}| &amp; \enclose{updiagonalstrike}{x+y}\\<br>\verb|\enclose{downdiagonalstrike}{x+y}| &amp; \enclose{downdiagonalstrike}{x+y}\\<br>\verb|\enclose{horizontalstrike,updiagonalstrike}{x+y}| &amp; \enclose{horizontalstrike,updiagonalstrike}{x+y}\\<br>\end{array}\tag{7}<br>$$</p><p>详细请参考<a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference/5044%20MathJax%20basic%20tutorial%20and%20quick%20reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a>,有兴趣也可以自己编辑一些有趣的表达式。</p><h3 id="数学符号识别工具"><a href="#数学符号识别工具" class="headerlink" title="数学符号识别工具"></a>数学符号识别工具</h3><p>   利用Detexify这款工具，在方框中手写数学符号，右边会给出对应的latex语法。</p><p>   <img src="/img/detexify.PNG" alt="Detexify"></p><p>   网址<a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener">Detexify</a></p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> Latex </tag>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
   
   
 </search>
