@@ -5,9 +5,9 @@
   <subtitle>To understand and be understood</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://n4a.github.io/"/>
   <updated>2018-07-29T12:41:53.058Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://n4a.github.io/</id>
   
   <author>
     <name>N4A</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Meta Learning</title>
-    <link href="http://yoursite.com/2018/07/29/Meta-Learning/"/>
-    <id>http://yoursite.com/2018/07/29/Meta-Learning/</id>
+    <link href="https://n4a.github.io/2018/07/29/Meta-Learning/"/>
+    <id>https://n4a.github.io/2018/07/29/Meta-Learning/</id>
     <published>2018-07-29T12:38:31.000Z</published>
     <updated>2018-07-29T12:41:53.058Z</updated>
     
@@ -33,18 +33,18 @@
     </summary>
     
     
-      <category term="Meta Learning" scheme="http://yoursite.com/tags/Meta-Learning/"/>
+      <category term="Meta Learning" scheme="https://n4a.github.io/tags/Meta-Learning/"/>
     
-      <category term="AI" scheme="http://yoursite.com/tags/AI/"/>
+      <category term="AI" scheme="https://n4a.github.io/tags/AI/"/>
     
-      <category term="Machine Learning" scheme="http://yoursite.com/tags/Machine-Learning/"/>
+      <category term="Machine Learning" scheme="https://n4a.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
   <entry>
     <title>ICML&#39;18 GAN 理论文章总结</title>
-    <link href="http://yoursite.com/2018/07/16/ICML-18-GAN-%E7%90%86%E8%AE%BA%E6%96%87%E7%AB%A0%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2018/07/16/ICML-18-GAN-理论文章总结/</id>
+    <link href="https://n4a.github.io/2018/07/16/ICML-18-GAN-%E7%90%86%E8%AE%BA%E6%96%87%E7%AB%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://n4a.github.io/2018/07/16/ICML-18-GAN-理论文章总结/</id>
     <published>2018-07-16T15:17:07.000Z</published>
     <updated>2018-07-17T14:44:58.856Z</updated>
     
@@ -63,16 +63,16 @@
     </summary>
     
     
-      <category term="GAN" scheme="http://yoursite.com/tags/GAN/"/>
+      <category term="GAN" scheme="https://n4a.github.io/tags/GAN/"/>
     
-      <category term="ICML" scheme="http://yoursite.com/tags/ICML/"/>
+      <category term="ICML" scheme="https://n4a.github.io/tags/ICML/"/>
     
   </entry>
   
   <entry>
     <title>GAN and it&#39;s applications on image translation</title>
-    <link href="http://yoursite.com/2018/03/30/GAN-and-it-s-applications/"/>
-    <id>http://yoursite.com/2018/03/30/GAN-and-it-s-applications/</id>
+    <link href="https://n4a.github.io/2018/03/30/GAN-and-it-s-applications/"/>
+    <id>https://n4a.github.io/2018/03/30/GAN-and-it-s-applications/</id>
     <published>2018-03-30T08:12:14.000Z</published>
     <updated>2018-07-17T08:31:05.797Z</updated>
     
@@ -86,18 +86,18 @@
     </summary>
     
     
-      <category term="GAN" scheme="http://yoursite.com/tags/GAN/"/>
+      <category term="GAN" scheme="https://n4a.github.io/tags/GAN/"/>
     
-      <category term="Image Translation" scheme="http://yoursite.com/tags/Image-Translation/"/>
+      <category term="Image Translation" scheme="https://n4a.github.io/tags/Image-Translation/"/>
     
-      <category term="Cross Domain Learning" scheme="http://yoursite.com/tags/Cross-Domain-Learning/"/>
+      <category term="Cross Domain Learning" scheme="https://n4a.github.io/tags/Cross-Domain-Learning/"/>
     
   </entry>
   
   <entry>
     <title>Capsule net</title>
-    <link href="http://yoursite.com/2017/11/09/Capsule-net/"/>
-    <id>http://yoursite.com/2017/11/09/Capsule-net/</id>
+    <link href="https://n4a.github.io/2017/11/09/Capsule-net/"/>
+    <id>https://n4a.github.io/2017/11/09/Capsule-net/</id>
     <published>2017-11-09T08:08:07.000Z</published>
     <updated>2018-07-17T12:05:22.950Z</updated>
     
@@ -112,18 +112,18 @@
     </summary>
     
     
-      <category term="Capsule Net" scheme="http://yoursite.com/tags/Capsule-Net/"/>
+      <category term="Capsule Net" scheme="https://n4a.github.io/tags/Capsule-Net/"/>
     
-      <category term="CNN" scheme="http://yoursite.com/tags/CNN/"/>
+      <category term="CNN" scheme="https://n4a.github.io/tags/CNN/"/>
     
-      <category term="Deep Learning" scheme="http://yoursite.com/tags/Deep-Learning/"/>
+      <category term="Deep Learning" scheme="https://n4a.github.io/tags/Deep-Learning/"/>
     
   </entry>
   
   <entry>
     <title>李航_统计学习方法</title>
-    <link href="http://yoursite.com/2017/10/21/%E6%9D%8E%E8%88%AA-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
-    <id>http://yoursite.com/2017/10/21/李航-统计学习方法/</id>
+    <link href="https://n4a.github.io/2017/10/21/%E6%9D%8E%E8%88%AA-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    <id>https://n4a.github.io/2017/10/21/李航-统计学习方法/</id>
     <published>2017-10-21T08:21:54.000Z</published>
     <updated>2018-07-17T12:11:32.996Z</updated>
     
@@ -152,7 +152,7 @@
     </summary>
     
     
-      <category term="统计学习" scheme="http://yoursite.com/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/"/>
+      <category term="统计学习" scheme="https://n4a.github.io/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
