@@ -272,6 +272,164 @@
   
   
   
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N4A">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="N4A Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/" itemprop="url">基因算法解析设计，以背包问题和旅行商问题为例</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-04T16:31:57+08:00">
+                2017-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/" class="leancloud_visitors" data-flag-title="基因算法解析设计，以背包问题和旅行商问题为例">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="一、算法说明"><a href="#一、算法说明" class="headerlink" title="一、算法说明"></a>一、算法说明</h3><h4 id="基因算法"><a href="#基因算法" class="headerlink" title="基因算法"></a>基因算法</h4><p>基因算法有一套公共的完整的框架，伪代码如下。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span></span><br><span class="line">  set time t = <span class="number">0</span> <span class="comment"># first generation</span></span><br><span class="line">  initGeneration() <span class="comment"># initialize the population P(t)</span></span><br><span class="line">  <span class="keyword">while</span> the termination condition isnot met <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">begin</span></span><br><span class="line">    </span><br><span class="line">    fitness() <span class="comment"># evaluate fitness of each member of the population P(t);</span></span><br><span class="line">    select() <span class="comment"># select members from population P(t) based on fitness;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># produce the offspring of these pairs using genetic operators(cross,mutate);</span></span><br><span class="line">    <span class="comment"># replace candidates of P(t), with these offspring;</span></span><br><span class="line">    cross() <span class="comment">#</span></span><br><span class="line">    mutate() <span class="comment">#</span></span><br><span class="line">    </span><br><span class="line">    set time t = t + <span class="number">1</span> <span class="comment"># new generation</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>结合以上代码来分析一下基因算法：</p>
+<ol>
+<li>第3行，首先要初始化第一代种群。这里涉及到一个个体是如何编码的，这一点对于不同的具体问题，要做出不同的实现。</li>
+<li>第4~16行，在终止条件到来之前，种群一代代循环进化，具体如下：<ol>
+<li>第7行，计算种群个体的适应度，这里可以评估最优秀个体和平均适应度等。这一点上适应度对于不同的具体问题，其个体适应度计算方法不同，要做出不同实现。</li>
+<li>第8行，根据个体的适应度不同，选出优秀的个体。这一点有多种不同的策略，例如轮盘赌策略和随机二选一的策略。</li>
+<li>12~13行，选出优秀的个体之后，我们要用这些个体产生新一代的种群。具体方法则是交叉和变异。这里有两点需注意，一是交叉或变异的个体的选择有多种不同的策略，二是针对于不同的具体问题，交叉或变异的具体方法不同。</li>
+<li>第15行，经过以上操作产生了新的一代，在这里做出标记。</li>
+</ol>
+</li>
+<li>当达到终止条件时，则结束进化。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/01/04/基因算法解析_设计_以背包问题和旅行商问题为例/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
     
   
 
@@ -793,7 +951,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -806,7 +964,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title>ml basic knowledge practice_regression problem</title>
+      <link href="/2018/10/27/ml-basic-knowledge-practice-regression-problem/"/>
+      <url>/2018/10/27/ml-basic-knowledge-practice-regression-problem/</url>
+      <content type="html"><![CDATA[<h2 id="1-Task-Description"><a href="#1-Task-Description" class="headerlink" title="1 Task Description"></a>1 Task Description</h2><p>Use the following dataset to do house price predicting work.</p><ol><li><a href="https://www.kaggle.com/vikrishnan/boston-house-prices" target="_blank" rel="noopener">https://www.kaggle.com/vikrishnan/boston-house-prices</a></li><li><a href="https://github.com/datasets/house-prices-uk" target="_blank" rel="noopener">https://github.com/datasets/house-prices-uk</a></li></ol><p>Details: design a model to do house price predicting work. Linear Regression models including basic linear model based on polynomial, Ridge Regression, Lasso Regression and regression model based Decision Tree must be implemented. Regression models based on SVM and Deep Learning is optional.</p><a id="more"></a><div class="row">    <embed src="/pdf/regression.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+      
+      
+        <tags>
+            
+            <tag> Mechine Learning </tag>
+            
+            <tag> Regression Probelm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>To the Moon_拐骗少女的小混混</title>
       <link href="/2018/09/27/%E6%8B%90%E9%AA%97%E5%B0%91%E5%A5%B3%E7%9A%84%E5%B0%8F%E6%B7%B7%E6%B7%B7/"/>
       <url>/2018/09/27/%E6%8B%90%E9%AA%97%E5%B0%91%E5%A5%B3%E7%9A%84%E5%B0%8F%E6%B7%B7%E6%B7%B7/</url>
