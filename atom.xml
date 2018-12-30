@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://n4a.github.io/"/>
-  <updated>2018-12-30T13:57:36.283Z</updated>
+  <updated>2018-12-30T14:06:07.178Z</updated>
   <id>https://n4a.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://n4a.github.io/2018/12/30/Paper-summary-work-based-on-meta-learning/"/>
     <id>https://n4a.github.io/2018/12/30/Paper-summary-work-based-on-meta-learning/</id>
     <published>2018-12-30T13:55:17.000Z</published>
-    <updated>2018-12-30T13:57:36.283Z</updated>
+    <updated>2018-12-30T14:06:07.178Z</updated>
     
     <content type="html"><![CDATA[<ol><li>Meta Learning Framework</li><li>ProtoNet: 一个和 Matching Net 十分相似的处理 few shot learning 任务的<br>模型</li><li>MAML: MAML 模型通过 Meta learning 的方法，尝试为所有的子任务学<br>习一个初始参数，使得各个子任务能够在该参数基础上快速收敛。</li><li>Meta learning for unsupervised learning: 一种利用 meta learning 框架来使<br>用无标签数据的方法。</li><li>Meta learning for item cold-start recommendation: Meta learning 在物品冷<br>启动任务中的一个应用。 </li></ol><a id="more"></a><div class="row">    <embed src="/pdf/Meta_learning_Paper_summary.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
     
