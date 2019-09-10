@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://n4a.github.io/2019/09/10/Paper-Notes-About-Recommendation-in-AAAI19/img/aaai19/session-graph.PNG">
 <meta property="og:image" content="https://n4a.github.io/2019/09/10/Paper-Notes-About-Recommendation-in-AAAI19/img/aaai19/camo.PNG">
 <meta property="og:image" content="https://n4a.github.io/2019/09/10/Paper-Notes-About-Recommendation-in-AAAI19/img/aaai19/kg-lstm.PNG">
-<meta property="og:updated_time" content="2019-09-10T07:57:53.679Z">
+<meta property="og:updated_time" content="2019-09-10T08:51:00.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paper_Notes_About_Recommendation_in_AAAI19">
 <meta name="twitter:description" content="Overview">
@@ -375,11 +375,11 @@
 <h1 id="Session-based-Recommendation-with-Graph-Neural-Networks"><a href="#Session-based-Recommendation-with-Graph-Neural-Networks" class="headerlink" title="Session-based Recommendation with Graph Neural Networks"></a>Session-based Recommendation with Graph Neural Networks</h1><p>Problem: Session Recommendation</p>
 <p>Gap: Transitions among distant items are often overlooked by previous methods. </p>
 <p>Method: Use Graph to model item relation in sessions and utilize Graph Neural Networks to capturing transitions of items and generate accurate item embedding vectors.</p>
-<p><img src="./img/aaai19/session-graph.PNG" alt="Session graph"></p>
+<p><img src="img/aaai19/session-graph.PNG" alt="Session graph"></p>
 <h1 id="CAMO-A-Collaborative-Ranking-Method-for-Content-Based-Recommendation"><a href="#CAMO-A-Collaborative-Ranking-Method-for-Content-Based-Recommendation" class="headerlink" title="CAMO: A Collaborative Ranking Method for Content Based Recommendation"></a>CAMO: A Collaborative Ranking Method for Content Based Recommendation</h1><p>Problem: A traditional line that uses auxiliary information to enrich item embedding based on MF. The general score function for user $i$, item $j$ and auxiliary info $doc_j$ is as followings:<br>$$<br>f(i,j,doc_j) = p_i^T(q_j + g(doc_j))<br>$$<br>where $g(.)$ is the encoding function.</p>
 <p>Gap: Some methods ignore the order of words, while others fail to identify the high leveled topic info.</p>
 <p>Method: An encoding function based on GRU(capture order) and multi-head attention mechanism(model topic info).</p>
-<p><img src="./img/aaai19/camo.PNG" alt="CAMO"></p>
+<p><img src="img/aaai19/camo.PNG" alt="CAMO"></p>
 <p>A Nice Attention Introduction: <a href="https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html" target="_blank" rel="noopener">https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html</a></p>
 <h1 id="Explainable-Reasoning-over-Knowledge-Graphs-for-Recommendation"><a href="#Explainable-Reasoning-over-Knowledge-Graphs-for-Recommendation" class="headerlink" title="Explainable Reasoning over Knowledge Graphs for Recommendation"></a>Explainable Reasoning over Knowledge Graphs for Recommendation</h1><p>Motivation: The connectivity information in KG can help to endow recommender systems the ability of reasoning and explainability. </p>
 <p>Gap: Some traditional methods(use mata-paths) need domain knowledge to predefine meta-paths, while others(embedding based, like using TransE) are less explainable.</p>
@@ -392,11 +392,20 @@
 <li><p>The score function from user $u$ to item $i$ is model as:<br>$$<br>\hat{y}<em>{ui} = f</em>{\Theta}(u,i|P(u,i))<br>$$</p>
 </li>
 <li><p>Use LSTM to model the preference of each path and use a weighted pooling layer(not attention) to calculate the final preference and estimate the importance of each path.</p>
-<p><img src="./img/aaai19/kg-lstm.PNG" alt="kg-lstm"></p>
+<p><img src="img/aaai19/kg-lstm.PNG" alt="kg-lstm"></p>
 </li>
 </ol>
 <p>Weighted Pooling Layer:</p>
 <p>For each preference $s_k$ outputted from the LSTM layer, the weighted pooling layer is defined as follows:<br>$$<br>g(s_1, s_2, …, s_K) = log[\sum_{k=1}^K \exp (\frac{s_K}{\gamma})]<br>$$<br>where $\gamma$ is a hyper-parameter to control each exponential weight and the path importance is modeled as the gradient on each path preference:<br>$$<br>\frac{\partial g}{\partial s_k} = \frac{\exp (s_k/ \gamma)}{\gamma \sum_{k^{‘}} \exp (s_{k^{‘}}/\gamma)}<br>$$<br>Finally,  the score function is<br>$$<br>y_{ui} = \sigma(g(s_1,s_2,…,s_K))<br>$$</p>
+<h1 id="From-Zero-Shot-Learning-to-Cold-Start-Recommendation"><a href="#From-Zero-Shot-Learning-to-Cold-Start-Recommendation" class="headerlink" title="From Zero-Shot Learning to Cold-Start Recommendation"></a>From Zero-Shot Learning to Cold-Start Recommendation</h1><p>Problem: Cold-start Recommendation(CSR)</p>
+<p>Gap: no gap but a novel view in light of Zero-Shot Learning(ZCL). Actually, I am not used to this kind of writing pattern.</p>
+<p>Challenge to formulate CSR as a ZSL problem: </p>
+<ol>
+<li>Domain shift problem: the data distribution is not same as in ZSL</li>
+<li>Data sparsity: the interactions in recommendation domain is very sparse.</li>
+<li>Efficiency. </li>
+</ol>
+<p>Method:</p>
 
       
     </div>
@@ -646,7 +655,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Session-based-Recommendation-with-Graph-Neural-Networks"><span class="nav-number">2.</span> <span class="nav-text">Session-based Recommendation with Graph Neural Networks</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAMO-A-Collaborative-Ranking-Method-for-Content-Based-Recommendation"><span class="nav-number">3.</span> <span class="nav-text">CAMO: A Collaborative Ranking Method for Content Based Recommendation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Explainable-Reasoning-over-Knowledge-Graphs-for-Recommendation"><span class="nav-number">4.</span> <span class="nav-text">Explainable Reasoning over Knowledge Graphs for Recommendation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Overview"><span class="nav-number">1.</span> <span class="nav-text">Overview</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Session-based-Recommendation-with-Graph-Neural-Networks"><span class="nav-number">2.</span> <span class="nav-text">Session-based Recommendation with Graph Neural Networks</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CAMO-A-Collaborative-Ranking-Method-for-Content-Based-Recommendation"><span class="nav-number">3.</span> <span class="nav-text">CAMO: A Collaborative Ranking Method for Content Based Recommendation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Explainable-Reasoning-over-Knowledge-Graphs-for-Recommendation"><span class="nav-number">4.</span> <span class="nav-text">Explainable Reasoning over Knowledge Graphs for Recommendation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#From-Zero-Shot-Learning-to-Cold-Start-Recommendation"><span class="nav-number">5.</span> <span class="nav-text">From Zero-Shot Learning to Cold-Start Recommendation</span></a></li></ol></div>
             
 
           </div>
