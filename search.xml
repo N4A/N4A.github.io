@@ -81,6 +81,23 @@
     </entry>
     
     <entry>
+      <title>ml_basic_classifiers</title>
+      <link href="/2018/11/17/ml-basic-classifiers/"/>
+      <url>/2018/11/17/ml-basic-classifiers/</url>
+      <content type="html"><![CDATA[<h2 id="1-Task-description"><a href="#1-Task-description" class="headerlink" title="1 Task description"></a>1 Task description</h2><ul><li>Based on the MNIST dataset, design and implement a proper convolutional neural network.</li><li>Based on the MNIST dataset, design and implement classifiers including: least squares with regularization, Fisher discriminant analysis (with kernels), Perceptron (with kernels), logistic regression, SVM (with kernels), MLP-NN with two different error functions.</li><li>(optional)Based on CNN classifiers, please implement an object detection task (including face recognition).</li><li>Design and implement a proper recurrent neural network based on LSTM or/and GRU for Sentiment Analysis. Data is available at <a href="http://deeplearning.net/tutorial/lstm.html" target="_blank" rel="noopener">http://deeplearning.net/tutorial/lstm.html</a></li></ul><a id="more"></a><iframe src="/html/assignment3.html"> Your browser does not support iframe</iframe>]]></content>
+      
+      
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+            <tag> Classifiers </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>ml basic knowledge practice_regression problem</title>
       <link href="/2018/10/27/ml-basic-knowledge-practice-regression-problem/"/>
       <url>/2018/10/27/ml-basic-knowledge-practice-regression-problem/</url>
@@ -92,23 +109,6 @@
             <tag> Mechine Learning </tag>
             
             <tag> Regression Probelm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>ml_basic_classifiers</title>
-      <link href="/2018/10/17/ml-basic-classifiers/"/>
-      <url>/2018/10/17/ml-basic-classifiers/</url>
-      <content type="html"><![CDATA[<h2 id="1-Task-description"><a href="#1-Task-description" class="headerlink" title="1 Task description"></a>1 Task description</h2><ul><li>Based on the MNIST dataset, design and implement a proper convolutional neural network.</li><li>Based on the MNIST dataset, design and implement classifiers including: least squares with regularization, Fisher discriminant analysis (with kernels), Perceptron (with kernels), logistic regression, SVM (with kernels), MLP-NN with two different error functions.</li><li>(optional)Based on CNN classifiers, please implement an object detection task (including face recognition).</li><li>Design and implement a proper recurrent neural network based on LSTM or/and GRU for Sentiment Analysis. Data is available at <a href="http://deeplearning.net/tutorial/lstm.html" target="_blank" rel="noopener">http://deeplearning.net/tutorial/lstm.html</a></li></ul><a id="more"></a><iframe src="/html/assignment3.html"> Your browser does not support iframe</iframe>]]></content>
-      
-      
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-            <tag> Classifiers </tag>
             
         </tags>
       
