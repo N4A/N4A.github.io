@@ -373,20 +373,25 @@
 <p>Papers like follows:</p>
 <ol>
 <li><a href="#explainable-reasoning-over-knowledge-graphs-for-recommendation">Explainable Reasoning over Knowledge Graphs for Recommendation</a>: Use knowledge graph(KG) info for expalainability. Select the most related path in KG as the explanation.</li>
-<li><a href="#Explainable Recommendation Through Attentive Multi-View Learning">Explainable Recommendation Through Attentive Multi-View Learning</a>: Contruct a hierarchical (explicit) feature (e.g. meat, seafood and so on) tree for explainability. Select the most related features as explanation.</li>
+<li><a href="#Explainable Recommendation Through Attentive Multi-View Learning">Explainable Recommendation Through Attentive Multi-View Learning</a>: Construct a hierarchical (explicit) feature (e.g. meat, seafood and so on) tree for explainability. Select the most related features as explanation.</li>
 <li><a href="#Dynamic Explainable Recommendation based on Neural Attentive Models">Dynamic Explainable Recommendation based on Neural Attentive Models</a>: Generate dynamic explanations at different time for a user by using GRU. An explanation is the most related sentence in the review of the recommended item.</li>
 </ol>
-<h2 id="Domain-Combination"><a href="#Domain-Combination" class="headerlink" title="Domain Combination"></a>Domain Combination</h2><p>Use the complete idea in one domain to model and sovle the problem in another domain.</p>
+<h2 id="Sequential-Recommendation"><a href="#Sequential-Recommendation" class="headerlink" title="Sequential Recommendation"></a>Sequential Recommendation</h2><p>Different from traditional MF that treats users and items equally, the methods model the interactions between users and items as a number of historical interaction sequences of users.  Then focusing on the sequential interactions of users, some methods was proposed to analysis the phenomenon like long-term interests, drifted interests, repeat consumption and some other task-specific aspects. The tasks include next item (basket) prediction (like POI), session recommendation. </p>
+<ol>
+<li><a href="#A Repeat Aware Neural Recommendation Machine for Session-based Recommendation">A Repeat Aware Neural Recommendation Machine for Session-based Recommendation</a>: Emphasize the importance of repeat consumption.</li>
+<li><a href="#DAN: Deep Attention Neural Network for News Recommendation">DAN: Deep Attention Neural Network for News Recommendation</a>: Do a specific task with a complex combination of popular networks. The emphasized point is still the order info that has been studied for general recommendation over and over again.</li>
+<li><a href="#Session-based Recommendation with Graph Neural Networks">Session-based Recommendation with Graph Neural Networks</a>: Model item transitions in sessions as a Graph.</li>
+<li><a href="#Hierarchical Context enabled Recurrent Neural Network for Recommendation">Hierarchical Context enabled Recurrent Neural Network for Recommendation</a>: Emphasize global long-term interests, local sub-sequence interests and the temporary interests of each transition in a sequence.</li>
+<li><a href="#A Spatio-Temporal Gated Network for Next POI Recommendation">A Spatio-Temporal Gated Network for Next POI Recommendation</a>: Emphasize the influence of spatio-temporal intervals between check-ins for POI recommendation.</li>
+</ol>
+<h2 id="Domain-Combination"><a href="#Domain-Combination" class="headerlink" title="Domain Combination"></a>Domain Combination</h2><p>Use the complete idea in one domain to model and solve the problem in another domain.</p>
 <p>Papers like follows:</p>
 <ol>
-<li><a href="#From Zero-Shot Learning to Cold-Start Recommendation">From Zero-Shot Learning to Cold-Start Recommendation</a>: Use ZSL method to sovle CSR problem</li>
+<li><a href="#From Zero-Shot Learning to Cold-Start Recommendation">From Zero-Shot Learning to Cold-Start Recommendation</a>: Use ZSL method to solve CSR problem</li>
 <li><a href="#Meta Learning for Image Captioning">Meta Learning for Image Captioning</a></li>
-<li><a href="#Session-based Recommendation with Graph Neural Networks">Session-based Recommendation with Graph Neural Networks</a>: Model item transtions in sessions as a Graph.</li>
 </ol>
 <h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ol>
-<li><a href="#A Collaborative Ranking Method for Content Based Recommendation">A Collaborative Ranking Method for Content Based Recommendation</a>: Follow a traditonal line that generates item embedding from auxiliary info and then combine it with MF like $u_i^T(v_j + embedding(doc_j))$</li>
-<li><a href="#DAN: Deep Attention Neural Network for News Recommendation">DAN: Deep Attention Neural Network for News Recommendation</a>: Do a specific task with a complex combination of popular networks.</li>
-<li><a href="#A Repeat Aware Neural Recommendation Machine for Session-based Recommendation">A Repeat Aware Neural Recommendation Machine for Session-based Recommendation</a>: Emphasize the importance of repeat consumption.</li>
+<li><a href="#A Collaborative Ranking Method for Content Based Recommendation">A Collaborative Ranking Method for Content Based Recommendation</a>: Follow a traditional line that generates item embedding from auxiliary info and then combine it with MF like $u_i^T(v_j + embedding(doc_j))$</li>
 <li>From Recommendation Systems to Facility Location Games: An interest aspect for recommendation problem. The authors design a Mediator (for service providers) to direct what the content providers(e.g. blog/video publishers) should provide to achieve overall higher social welfare while intervene as little as possible. The introduction of method is omitted for it is more related to social science and is a bit complex.</li>
 </ol>
           <!--noindex-->
@@ -1044,6 +1049,156 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2018/10/17/ml-basic-classifiers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N4A">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="N4A Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/17/ml-basic-classifiers/" itemprop="url">ml_basic_classifiers</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-17T13:26:02+08:00">
+                2018-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/17/ml-basic-classifiers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/17/ml-basic-classifiers/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/10/17/ml-basic-classifiers/" class="leancloud_visitors" data-flag-title="ml_basic_classifiers">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="1-Task-description"><a href="#1-Task-description" class="headerlink" title="1 Task description"></a>1 Task description</h2><ul>
+<li>Based on the MNIST dataset, design and implement a proper convolutional neural network.</li>
+<li>Based on the MNIST dataset, design and implement classifiers including: least squares with regularization, Fisher discriminant analysis (with kernels), Perceptron (with kernels), logistic regression, SVM (with kernels), MLP-NN with two different error functions.</li>
+<li>(optional)Based on CNN classifiers, please implement an object detection task (including face recognition).</li>
+<li>Design and implement a proper recurrent neural network based on LSTM or/and GRU for Sentiment Analysis. Data is available at <a href="http://deeplearning.net/tutorial/lstm.html" target="_blank" rel="noopener">http://deeplearning.net/tutorial/lstm.html</a></li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/17/ml-basic-classifiers/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2018/09/27/拐骗少女的小混混/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1622,153 +1777,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2017/11/09/Capsule-net/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="N4A">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="N4A Space">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/09/Capsule-net/" itemprop="url">Capsule net</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-09T16:08:07+08:00">
-                2017-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/11/09/Capsule-net/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/11/09/Capsule-net/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/11/09/Capsule-net/" class="leancloud_visitors" data-flag-title="Capsule net">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-Transforming-Auto-encoder-ICANN-2011"><a href="#1-Transforming-Auto-encoder-ICANN-2011" class="headerlink" title="1 Transforming Auto-encoder(ICANN 2011 )"></a>1 Transforming Auto-encoder(ICANN 2011 )</h2><h3 id="1-1-Introduction"><a href="#1-1-Introduction" class="headerlink" title="1.1 Introduction"></a>1.1 Introduction</h3><blockquote>
-<p>Artificial neural networks should use local “capsules” that perform some quite complicated internal computations on their inputs and then encapsulate the results of these computations into a small vector of highly informative outputs. Each capsule learns to recognize an implicitly defined visual entity over a limited domain of viewing conditions and deformations and it outputs both the probability that the entity is present within its limited domain and a set of “instantiation parameters” that may include the precise pose, lighting and deformation of the visual entity relative to an implicitly defined canonical version of that entity. When the capsule is working properly, the probability of the visual entity being present is locally invariant – it does not change as the entity moves over the manifold of possible appearances within the limited domain covered by the capsule. The instantiation parameters, however, are “equivariant” – as the viewing conditions change and the entity moves over the appearance manifold, the instantiation parameters change by a corresponding amount because they are representing the intrinsic coordinates of the entity on the appearance manifold. </p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/09/Capsule-net/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1823,7 +1831,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1836,7 +1844,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

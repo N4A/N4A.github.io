@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Machine Learning,Classifiers," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="3DWalker                          	 	                                      	     Please use a browser that supports &quot;canvas&quot;      	Debug Message">
-<meta property="og:type" content="website">
-<meta property="og:title" content="N4A Space">
-<meta property="og:url" content="https://n4a.github.io/demo/webgl/index.html">
+<meta name="description" content="1 Task description Based on the MNIST dataset, design and implement a proper convolutional neural network. Based on the MNIST dataset, design and implement classifiers including: least squares with re">
+<meta name="keywords" content="Machine Learning,Classifiers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ml_basic_classifiers">
+<meta property="og:url" content="https://n4a.github.io/2018/10/17/ml-basic-classifiers/index.html">
 <meta property="og:site_name" content="N4A Space">
-<meta property="og:description" content="3DWalker                          	 	                                      	     Please use a browser that supports &quot;canvas&quot;      	Debug Message">
+<meta property="og:description" content="1 Task description Based on the MNIST dataset, design and implement a proper convolutional neural network. Based on the MNIST dataset, design and implement classifiers including: least squares with re">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-01-02T09:57:23.982Z">
+<meta property="og:updated_time" content="2019-09-17T07:05:04.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="N4A Space">
-<meta name="twitter:description" content="3DWalker                          	 	                                      	     Please use a browser that supports &quot;canvas&quot;      	Debug Message">
+<meta name="twitter:title" content="ml_basic_classifiers">
+<meta name="twitter:description" content="1 Task description Based on the MNIST dataset, design and implement a proper convolutional neural network. Based on the MNIST dataset, design and implement classifiers including: least squares with re">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://n4a.github.io/demo/webgl/"/>
+  <link rel="canonical" href="https://n4a.github.io/2018/10/17/ml-basic-classifiers/"/>
 
 
 
 
 
-  <title> | N4A Space</title>
+  <title>ml_basic_classifiers | N4A Space</title>
   
 
 
@@ -266,60 +267,221 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2018/10/17/ml-basic-classifiers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N4A">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="N4A Space">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>3DWalker</title>
-    <script src="lib/webgl-utils.js"></script>
-    <script src="lib/webgl-debug.js"></script>
-    <script src="lib/cuon-utils.js"></script>
-    <script src="lib/cuon-matrix.js"></script>
-    <script src="MyVector3.js"></script>
-	<script src="scene.js"></script>
-	<script src="objLoader.js"></script>
-    <script src="index.js"></script>
-    <script src="webGL.js"></script>
-    <script src="keyEvent.js"></script>
-    <script src="animation.js"></script>
-    <script src="objdrawer.js"></script>
-    <script src="shadow.js"></script>
-  </head>
-
-  <body onload="main()">
-	<canvas id="webgl" width="400" height="400">
-    Please use a browser that supports "canvas"
-    </canvas>
-	<p id="messageBox">Debug Message</p>
-  </body>
-</html>
-
+          <h1 class="post-title" itemprop="name headline">ml_basic_classifiers</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-17T13:26:02+08:00">
+                2018-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/17/ml-basic-classifiers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/17/ml-basic-classifiers/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/10/17/ml-basic-classifiers/" class="leancloud_visitors" data-flag-title="ml_basic_classifiers">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="1-Task-description"><a href="#1-Task-description" class="headerlink" title="1 Task description"></a>1 Task description</h2><ul>
+<li>Based on the MNIST dataset, design and implement a proper convolutional neural network.</li>
+<li>Based on the MNIST dataset, design and implement classifiers including: least squares with regularization, Fisher discriminant analysis (with kernels), Perceptron (with kernels), logistic regression, SVM (with kernels), MLP-NN with two different error functions.</li>
+<li>(optional)Based on CNN classifiers, please implement an object detection task (including face recognition).</li>
+<li>Design and implement a proper recurrent neural network based on LSTM or/and GRU for Sentiment Analysis. Data is available at <a href="http://deeplearning.net/tutorial/lstm.html" target="_blank" rel="noopener">http://deeplearning.net/tutorial/lstm.html</a></li>
+</ul>
+<a id="more"></a>
+<iframe src="/html/assignment3.html"> Your browser does not support iframe</iframe>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Machine-Learning/" rel="tag"># Machine Learning</a>
+          
+            <a href="/tags/Classifiers/" rel="tag"># Classifiers</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/27/拐骗少女的小混混/" rel="next" title="To the Moon_拐骗少女的小混混">
+                <i class="fa fa-chevron-left"></i> To the Moon_拐骗少女的小混混
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/27/ml-basic-knowledge-practice-regression-problem/" rel="prev" title="ml basic knowledge practice_regression problem">
+                ml basic knowledge practice_regression problem <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
   </div>
 
 
@@ -355,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -375,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -388,7 +559,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -446,6 +617,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Task-description"><span class="nav-number">1.</span> <span class="nav-text">1 Task description</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
