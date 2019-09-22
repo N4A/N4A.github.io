@@ -372,27 +372,9 @@
           <h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><h2 id="Explainability"><a href="#Explainability" class="headerlink" title="Explainability"></a>Explainability</h2><p>Recently, the recommendation community has reached a consensus that accuracy can only be used to partially evaluate a system. Explainability of the model, which is the ability to provide explanations for why an item is recommended, is considered equally important.</p>
 <p>Papers like follows:</p>
 <ol>
-<li><a href="#explainable-reasoning-over-knowledge-graphs-for-recommendation">Explainable Reasoning over Knowledge Graphs for Recommendation</a>: Use knowledge graph(KG) info for expalainability. Select the most related path in KG as the explanation.</li>
+<li><a href="#explainable-reasoning-over-knowledge-graphs-for-recommendation">Explainable Reasoning over Knowledge Graphs for Recommendation</a>: Use knowledge graph(KG) info for explainability. Select the most related path in KG as the explanation.</li>
 <li><a href="#Explainable Recommendation Through Attentive Multi-View Learning">Explainable Recommendation Through Attentive Multi-View Learning</a>: Construct a hierarchical (explicit) feature (e.g. meat, seafood and so on) tree for explainability. Select the most related features as explanation.</li>
 <li><a href="#Dynamic Explainable Recommendation based on Neural Attentive Models">Dynamic Explainable Recommendation based on Neural Attentive Models</a>: Generate dynamic explanations at different time for a user by using GRU. An explanation is the most related sentence in the review of the recommended item.</li>
-</ol>
-<h2 id="Sequential-Recommendation"><a href="#Sequential-Recommendation" class="headerlink" title="Sequential Recommendation"></a>Sequential Recommendation</h2><p>Different from traditional MF that treats users and items equally, the methods model the interactions between users and items as a number of historical interaction sequences of users.  Then focusing on the sequential interactions of users, some methods was proposed to analysis the phenomenon like long-term interests, drifted interests, repeat consumption and some other task-specific aspects. The tasks include next item (basket) prediction (like POI), session recommendation. </p>
-<ol>
-<li><a href="#A Repeat Aware Neural Recommendation Machine for Session-based Recommendation">A Repeat Aware Neural Recommendation Machine for Session-based Recommendation</a>: Emphasize the importance of repeat consumption.</li>
-<li><a href="#DAN: Deep Attention Neural Network for News Recommendation">DAN: Deep Attention Neural Network for News Recommendation</a>: Do a specific task with a complex combination of popular networks. The emphasized point is still the order info that has been studied for general recommendation over and over again.</li>
-<li><a href="#Session-based Recommendation with Graph Neural Networks">Session-based Recommendation with Graph Neural Networks</a>: Model item transitions in sessions as a Graph.</li>
-<li><a href="#Hierarchical Context enabled Recurrent Neural Network for Recommendation">Hierarchical Context enabled Recurrent Neural Network for Recommendation</a>: Emphasize global long-term interests, local sub-sequence interests and the temporary interests of each transition in a sequence.</li>
-<li><a href="#A Spatio-Temporal Gated Network for Next POI Recommendation">A Spatio-Temporal Gated Network for Next POI Recommendation</a>: Emphasize the influence of spatio-temporal intervals between check-ins for POI recommendation.</li>
-</ol>
-<h2 id="Domain-Combination"><a href="#Domain-Combination" class="headerlink" title="Domain Combination"></a>Domain Combination</h2><p>Use the complete idea in one domain to model and solve the problem in another domain.</p>
-<p>Papers like follows:</p>
-<ol>
-<li><a href="#From Zero-Shot Learning to Cold-Start Recommendation">From Zero-Shot Learning to Cold-Start Recommendation</a>: Use ZSL method to solve CSR problem</li>
-<li><a href="#Meta Learning for Image Captioning">Meta Learning for Image Captioning</a></li>
-</ol>
-<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ol>
-<li><a href="#A Collaborative Ranking Method for Content Based Recommendation">A Collaborative Ranking Method for Content Based Recommendation</a>: Follow a traditional line that generates item embedding from auxiliary info and then combine it with MF like $u_i^T(v_j + embedding(doc_j))$</li>
-<li>From Recommendation Systems to Facility Location Games: An interest aspect for recommendation problem. The authors design a Mediator (for service providers) to direct what the content providers(e.g. blog/video publishers) should provide to achieve overall higher social welfare while intervene as little as possible. The introduction of method is omitted for it is more related to social science and is a bit complex.</li>
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1844,7 +1826,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-count">51</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
