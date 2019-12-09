@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="session recommendation,Attention," />
+  <meta name="keywords" content="Attention,session recommendation," />
 
 
 
@@ -82,30 +82,30 @@
 
 
 <meta name="description" content="Attention Mechanism in Session RecommendationThis report focuses on the attention mechanism used in some previous session recommendation works. The conclusion is summarized in the final part: Some Int">
-<meta name="keywords" content="session recommendation,Attention">
+<meta name="keywords" content="Attention,session recommendation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Session Recommendation">
 <meta property="og:url" content="https://n4a.github.io/2019/09/25/Session-Recommendation/index.html">
 <meta property="og:site_name" content="N4A Space">
 <meta property="og:description" content="Attention Mechanism in Session RecommendationThis report focuses on the attention mechanism used in some previous session recommendation works. The conclusion is summarized in the final part: Some Int">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/purpose_intuition.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/purpose_arch.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/purpose_benchmark_dataset.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/purpose_benchmark_exp.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/stamp.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/aaai19/session-graph.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/aaai19/repeat-ratio.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/aaai19/repeatnet.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/nais-arch.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/srs/multi-interests.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/aaai19/course-intuition.PNG">
-<meta property="og:image" content="https://n4a.github.io/2019/09/25/img/aaai19/course-data.PNG">
-<meta property="og:updated_time" content="2019-12-09T08:35:14.169Z">
+<meta property="og:image" content="https://n4a.github.io/img/srs/purpose_intuition.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/purpose_arch.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/purpose_benchmark_dataset.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/purpose_benchmark_exp.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/stamp.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/aaai19/session-graph.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/aaai19/repeat-ratio.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/aaai19/repeatnet.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/nais-arch.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/srs/multi-interests.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/aaai19/course-intuition.PNG">
+<meta property="og:image" content="https://n4a.github.io/img/aaai19/course-data.PNG">
+<meta property="og:updated_time" content="2019-12-09T08:44:49.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Session Recommendation">
 <meta name="twitter:description" content="Attention Mechanism in Session RecommendationThis report focuses on the attention mechanism used in some previous session recommendation works. The conclusion is summarized in the final part: Some Int">
-<meta name="twitter:image" content="https://n4a.github.io/2019/09/25/img/srs/purpose_intuition.PNG">
+<meta name="twitter:image" content="https://n4a.github.io/img/srs/purpose_intuition.PNG">
 
 
 
@@ -385,9 +385,9 @@
 <h2 id="Neural-Attentive-Session-based-Recommendation"><a href="#Neural-Attentive-Session-based-Recommendation" class="headerlink" title="Neural Attentive Session-based Recommendation"></a>Neural Attentive Session-based Recommendation</h2><p>CIKM’17, Best Paper Runner-ups Award</p>
 <p>Problem: Session recommendation.</p>
 <p>Gap: Previous works only consider the user’s sequential behavior in the current session, whereas the user’s main purpose in the current session is not emphasized.  An example is shown in the following figure. For the session in the left part, the global recommender models the user’s whole sequential behavior to make recommendations while the proposed local recommender could capture the user’s main purpose to make recommendations.</p>
-<p><img src="../img/srs/purpose_intuition.PNG" alt=""></p>
+<p><img src="/img/srs/purpose_intuition.PNG" alt=""></p>
 <p>Method:</p>
-<p><img src="../img/srs/purpose_arch.PNG" alt=""></p>
+<p><img src="/img/srs/purpose_arch.PNG" alt=""></p>
 <p>As shown in the above figure, the  process is summarized as</p>
 <ol>
 <li>In the upper left part, a GRU based encoder is used to encode the session of a user. The output state is denoted as $h_t^g$.</li>
@@ -396,8 +396,8 @@
 <li>In the right part, the score for each candidate item $i$ is calculated as $S_i = emb_i^TBc_t$ where $B$ is parameter. And then a Softmax Layer is used to normalize each score.</li>
 </ol>
 <p>Provide a benchmark:</p>
-<p><img src="../img/srs/purpose_benchmark_dataset.PNG" alt=""></p>
-<p><img src="../img/srs/purpose_benchmark_exp.PNG" alt=""></p>
+<p><img src="/img/srs/purpose_benchmark_dataset.PNG" alt=""></p>
+<p><img src="/img/srs/purpose_benchmark_exp.PNG" alt=""></p>
 <p>Notes: The authors emphasize that in traditional methods, the main purpose of a session was outlooked. And then the authors utilize attention mechanisms to solve this problem. However, at present, using $h_t^g$ as a query is not reasonable enough for three reasons as follows:</p>
 <ol>
 <li>$h_t^g$ is generated by capture information of the global sequence. So $h_t^g$ is similar to every item in the session, Using it to estimate attention weight tends to still capture the overall info of the sequence.</li>
@@ -408,7 +408,7 @@
 <h2 id="Other-works-that-follow-the-work"><a href="#Other-works-that-follow-the-work" class="headerlink" title="Other works that follow the work"></a>Other works that follow the work</h2><h3 id="Short-Term-Atention-Memory-Priority-Model-for-Session-based-Recommendation"><a href="#Short-Term-Atention-Memory-Priority-Model-for-Session-based-Recommendation" class="headerlink" title="Short-Term Atention/Memory Priority Model for Session-based Recommendation"></a>Short-Term Atention/Memory Priority Model for Session-based Recommendation</h3><p>KDD’18</p>
 <p>Gap: Capture both long-term and short-term interests in a session</p>
 <p>Method: </p>
-<p><img src="../img/srs/stamp.PNG" alt=""></p>
+<p><img src="/img/srs/stamp.PNG" alt=""></p>
 <p>As shown in the above figure, given the embeddings ${x_1, x_2,…,x_t}$ of a session, the process is summarized as follows:</p>
 <ol>
 <li><p>$m_s$ is the average of all embeddings, and then the long-term interests is got by an Attention Net in which the queries are $m_s$ and $x_t$. Then $m_a$ is transformed to $h_s$ by a MLP layer</p>
@@ -427,7 +427,7 @@
 <p>Problem: Session Recommendation</p>
 <p>Gap: Transitions among distant items are often overlooked by previous methods. </p>
 <p>Method: Use Graph to model item relation in sessions and utilize Graph Neural Networks to capturing transitions of items and generate accurate item embedding vectors. For example, as follows, the three sessions are constructed as a graph.</p>
-<p><img src="../img/aaai19/session-graph.PNG" alt="Session graph"></p>
+<p><img src="/img/aaai19/session-graph.PNG" alt="Session graph"></p>
 <p>Notes: </p>
 <ol>
 <li>In Attention Network, the authors also use the embedding of the last interacted item in the session as the query.</li>
@@ -436,9 +436,9 @@
 <h3 id="A-Repeat-Aware-Neural-Recommendation-Machine-for-Session-based-Recommendation"><a href="#A-Repeat-Aware-Neural-Recommendation-Machine-for-Session-based-Recommendation" class="headerlink" title="A Repeat Aware Neural Recommendation Machine for Session-based Recommendation"></a>A Repeat Aware Neural Recommendation Machine for Session-based Recommendation</h3><p>AAAI’19 </p>
 <p>Problem: session recommendation</p>
 <p>Gap: propose a novel <em>repeat consumption</em> phenomenon where the same item is re-consumed repeatedly over time. The following table shows the repeat ratio in three public datasets.  However, no previous works have emphasized <em>repeat consumption</em> with neural networks. (Multi-armed bandit problem has been studied for a long time to solve the repeat-explore dilemma for general recommendations.)</p>
-<p><img src="../img/aaai19/repeat-ratio.PNG" alt=""></p>
+<p><img src="/img/aaai19/repeat-ratio.PNG" alt=""></p>
 <p>Method: </p>
-<p><img src="../img/aaai19/repeatnet.PNG" alt=""></p>
+<p><img src="/img/aaai19/repeatnet.PNG" alt=""></p>
 <p>As shown in the above figure, the process is summarized as:</p>
 <ol>
 <li>Use GRU to encode the session sequence of a user.</li>
@@ -453,7 +453,7 @@
 <p>Problem: CF-based recommendation</p>
 <p>Gap: Traditional MF based methods need to retrain for real-time recommendations to update users’ preference vectors. On the other hand, item-to-item CF could make real-time recommendations much easier to achieve. However, previous works ignore different item has a different influence on the recommendation to users. So the authors use attention mechanisms to calculate the weight of influence for each item in one’s historical interactions.</p>
 <p>Method:</p>
-<p><img src="../img/srs/nais-arch.PNG" alt=""></p>
+<p><img src="/img/srs/nais-arch.PNG" alt=""></p>
 <p>As shown in the above figure, the process is summarized as follows:</p>
 <ol>
 <li>Each item has two embeddings: the embedding, denoted as $q$, when the item is in one user’s interaction and the embedding, denoted as $p$, when the item is a candidate item.</li>
@@ -477,15 +477,15 @@
 </ol>
 <p>For the second drawback, the intuition is obvious. The last interacted item will be not consistent with the next item when the user’s interests drift. Here, we don’t use interest drift to explain this phenomenon. The interests drift is not proper for the phenomenon. We can combine this problem with the first and third drawbacks to define the problem as <strong>multi-interests problem</strong>: <em>Each user have many kinds of interests.</em></p>
 <p>For example:</p>
-<p><img src="../img/srs/multi-interests.PNG" alt=""></p>
+<p><img src="/img/srs/multi-interests.PNG" alt=""></p>
 <p>As shown in the above figure, from the interaction sequence, we can see the use likes three kinds of movies: Action, Romantic and Education. For the user, the choice of the next movie is mainly dependent on which kind of movie is published or recommended. In this scenario, we can recommend Education, Action or Romantic movies. It’s not proper for the user just like Education movies at present.</p>
 <p>To model the interests of users at each time and capture users’ multi-interests at recommendation time, we propose to use RNN to model users’ dynamic interests and the attention mechanism with candidate item as the query to capture the multi-interests.</p>
 <p>For the example above, if the candidate item is an Education movie, we will focus more on the forth and the last movies to give the evaluate the score. And the recommendation for Action movies or Romantic movies is similar. Besides, other kinds of movies will get lower attention from all interactions. In this scenario, if we use the last hidden state as the query, then just Education movies will get more attention. Romantic and Action movies may be regarded as noises.</p>
 <h3 id="Support-of-Multi-interests"><a href="#Support-of-Multi-interests" class="headerlink" title="Support of Multi-interests."></a>Support of Multi-interests.</h3><p>An analysis of course recommendation datasets. (see <em>Hierarchical Reinforcement Learning for Course Recommendation in MOOCs</em> for detail)</p>
 <p>For previous attention-based works, when a user has interests in many different courses, the attention mechanism will perform poorly as the effects of the contributing courses are diluted by diverse historical courses.  An example is shown in the following figure, for a trained attention-based model, the real target course gets lower recommendation probability than a randomly selected course although it gives more related courses more weights.</p>
-<p><img src="../img/aaai19/course-intuition.PNG" alt=""></p>
+<p><img src="/img/aaai19/course-intuition.PNG" alt=""></p>
 <p>More analyses on the dataset are shown in the following figure. From figure (b), we can the category ratio is evenly distributed for all users. From figure (c), we can see as the category ratio grows larger which means these users like more kinds of courses, a trained attention-based model give lower recommendation probability to the target courses.</p>
-<p><img src="../img/aaai19/course-data.PNG" alt=""></p>
+<p><img src="/img/aaai19/course-data.PNG" alt=""></p>
 
       
     </div>
@@ -503,9 +503,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/session-recommendation/" rel="tag"># session recommendation</a>
-          
             <a href="/tags/Attention/" rel="tag"># Attention</a>
+          
+            <a href="/tags/session-recommendation/" rel="tag"># session recommendation</a>
           
         </div>
       
