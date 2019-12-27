@@ -278,6 +278,169 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2016/12/09/用prolog实现电影助手/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="N4A">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="N4A Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/12/09/用prolog实现电影助手/" itemprop="url">Prolog实践_用prolog实现电影助手</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-09T16:36:51+08:00">
+                2016-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/09/用prolog实现电影助手/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/09/用prolog实现电影助手/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/12/09/用prolog实现电影助手/" class="leancloud_visitors" data-flag-title="Prolog实践_用prolog实现电影助手">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="一、选题说明"><a href="#一、选题说明" class="headerlink" title="一、选题说明"></a>一、选题说明</h3><h4 id="选题背景"><a href="#选题背景" class="headerlink" title="选题背景"></a>选题背景</h4><p>我原来想做旅游助手，感觉比较实用，而且因为现在POI推荐挺火，找数据集应该不是很难。可惜找到的数据集都是英文地点，测试友好度就不行（比如我想做一个猜你所想的功能，要怎么测啊）。转做电影助手，找到的整理好的数据集也是英文的，像是movielen的1M和10M数据集。但是，后来我找到豆瓣电影排行榜250。如下：</p>
+<p><img src="/img/douban250.PNG" alt="豆瓣电影排行榜"></p>
+<h4 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h4><p>根据以上叙述，我的数据都来自豆瓣了。原来设想用API来请求的，但是现在不能用了。改用爬虫获取。现在我拥有250个条目（为经典电影），还了解到豆瓣电影也提供开放API，后期可以扩展近期热门电影，即将上映电影。这样的话就可以有一个较好的知识库。</p>
+<ol>
+<li><p>首先在排行榜上爬取电影的基本信息。</p>
+</li>
+<li><p>然后用获取到电影名，再通过豆瓣搜索功能，定为到这部电影，再获取它的简介。</p>
+</li>
+<li><p>数据模板：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">电影（名称，导演，主演，年代，国家，类型[list]，评分，热度，短评）</span><br><span class="line">电影（名称，简介）</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="功能设想"><a href="#功能设想" class="headerlink" title="功能设想"></a>功能设想</h4><ol>
+<li><strong>猜你所想</strong>：这个就和猜动物的功能是一样的，用户心中拟定一部电影，程序通过一系列问题，猜出这部电影。</li>
+<li><strong>荐你所想</strong>：用户有自己的喜好，但是又不能明确表述。程序通过问用户一些列问题来引导用户并分析用户所想，然后做出推荐。这对于选择综合症的用户来说是个不错的选择。</li>
+<li><strong>热门推荐</strong>：简单但是效果良好的推荐方法就是分析一下所有电影，然后给出热门好评电影列表。</li>
+<li><strong>电影查询</strong>：用户可能已经知道了一些电影。想要更进一步的了解电影信息。此时程序就可以从知识库中找到这些电影的信息然后展示给用户。</li>
+<li><strong>电影搜索</strong>：大多数情况下用户想要查一些电影，但是可能不是清除地知道电影名称。这时候用户可根据已有地信息来搜索。比如这是张国荣的电影或者这是一部美国电影等等。</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/09/用prolog实现电影助手/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://n4a.github.io/2016/10/30/使用Typora编辑文档/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -469,7 +632,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -482,7 +645,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
