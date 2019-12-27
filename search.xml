@@ -11,7 +11,13 @@
       
         <tags>
             
-            <tag> 生命，知识，大学，教育 </tag>
+            <tag> 生命 </tag>
+            
+            <tag> 知识 </tag>
+            
+            <tag> 大学 </tag>
+            
+            <tag> 教育 </tag>
             
         </tags>
       
@@ -45,9 +51,9 @@
       
         <tags>
             
-            <tag> Attention </tag>
-            
             <tag> session recommendation </tag>
+            
+            <tag> Attention </tag>
             
         </tags>
       
@@ -83,11 +89,11 @@
       
         <tags>
             
+            <tag> Attention </tag>
+            
             <tag> Recommender System </tag>
             
             <tag> Social Network </tag>
-            
-            <tag> Attention </tag>
             
         </tags>
       
