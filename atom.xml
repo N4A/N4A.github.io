@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://n4a.github.io/"/>
-  <updated>2019-12-27T09:42:57.780Z</updated>
+  <updated>2020-03-15T04:46:33.355Z</updated>
   <id>https://n4a.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>半监督学习笔记</title>
+    <link href="https://n4a.github.io/2020/02/28/%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://n4a.github.io/2020/02/28/半监督学习笔记/</id>
+    <published>2020-02-28T04:43:24.000Z</published>
+    <updated>2020-03-15T04:46:33.355Z</updated>
+    
+    <content type="html"><![CDATA[<p>一些常见的半监督学习文章总结，包括纯半监督学习，直推学习，主动学习</p><a id="more"></a><div class="row">    <embed src="/pdf/semi.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一些常见的半监督学习文章总结，包括纯半监督学习，直推学习，主动学习&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="半监督学习" scheme="https://n4a.github.io/tags/%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>哈佛大学校长350周年校庆讲话（1636-1986）</title>
@@ -82,9 +102,9 @@
     </summary>
     
     
-      <category term="session recommendation" scheme="https://n4a.github.io/tags/session-recommendation/"/>
-    
       <category term="Attention" scheme="https://n4a.github.io/tags/Attention/"/>
+    
+      <category term="session recommendation" scheme="https://n4a.github.io/tags/session-recommendation/"/>
     
   </entry>
   
@@ -139,11 +159,11 @@
     </summary>
     
     
-      <category term="Attention" scheme="https://n4a.github.io/tags/Attention/"/>
-    
       <category term="Recommender System" scheme="https://n4a.github.io/tags/Recommender-System/"/>
     
       <category term="Social Network" scheme="https://n4a.github.io/tags/Social-Network/"/>
+    
+      <category term="Attention" scheme="https://n4a.github.io/tags/Attention/"/>
     
   </entry>
   
@@ -256,33 +276,6 @@
       <category term="Mechine Learning" scheme="https://n4a.github.io/tags/Mechine-Learning/"/>
     
       <category term="Regression Probelm" scheme="https://n4a.github.io/tags/Regression-Probelm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>To the Moon_拐骗少女的小混混</title>
-    <link href="https://n4a.github.io/2018/09/27/%E6%8B%90%E9%AA%97%E5%B0%91%E5%A5%B3%E7%9A%84%E5%B0%8F%E6%B7%B7%E6%B7%B7/"/>
-    <id>https://n4a.github.io/2018/09/27/拐骗少女的小混混/</id>
-    <published>2018-09-27T01:36:10.000Z</published>
-    <updated>2018-09-28T16:58:59.021Z</updated>
-    
-    <content type="html"><![CDATA[<p>​    这篇文章是在之前的一篇文章的基础上续写的。没有读过的读者可以看一下这篇之前的介绍文。<a href="https://www.bilibili.com/read/cv1128664" target="_blank" rel="noopener">To the Moon 游戏设定介绍</a></p><p>​    To the Moon 这款游戏的剧情设计非常精彩。在游戏中，我们会一点点回溯主人公 John 的记忆。随着对故事的一点一点地深入了解，我们会困惑，会误解，会略带嘲弄，也会略有所感。可是当我们最后看清故事始末，只剩下感动与泪水。</p><p>​    如果想要完整的体验游戏所展现的故事，可以观看下面的视频。</p><iframe src="//player.bilibili.com/player.html?aid=31555731&cid=55173221&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe><a id="more"></a><iframe src="//player.bilibili.com/player.html?aid=31555731&cid=55173303&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe><iframe src="//player.bilibili.com/player.html?aid=31555731&cid=55172705&page=3" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe><iframe src="//player.bilibili.com/player.html?aid=31555731&cid=55173120&page=4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500"> </iframe><p>​    在回溯 John 记忆地过程中，我们发现女主 River 是个奇怪的人，她是一种特殊疾病患者，身患这种疾病的人既希望交流又不回避交流或者有交流障碍，可以理解为交流障碍患者。John 与其交往总是产生各种各样难以交流的问题。但是难能可贵，John 总是包容 River 奇怪的想法，并且想尽一切办法想要治好 River 的病，让她能够过上正常人的生活。这时候我们就会认为这个游戏讲了一个因爱而包容的故事，John 的形象非常饱满正面，值得学习。</p><p>​    但是，当我们来到男主中学时代的时候，就会惊讶的发现男主当年表白的动机并不单纯。Dr. Watts 看到这里之后，感概：“这么说这个家伙是个拐骗少女的小混混？”。</p><p><img src="http://i0.hdslb.com/bfs/article/941c7067c974c99290346fee00135bbf59ae4993.png" alt="img"></p><p>​    John 当初表白的动机和理由都很没有说服力，让他的朋友觉得这简直就是一段时间的骚扰罢了。John 认为 River 是一个特别的人，她总是一个人，那么跟她在一起一定是一件很酷的事。确实这个理由不怎么像是有责任心的人说的话，听上去 John 只是一时兴起，并且这样做可以让他觉得很酷。但是这时候，加上我们前面对 John 和 River 后来发展的了解。这个故事就变成了这样。虽然 John 的动机狗血，却在后来在交往过程中爱上了 River，并且毫不在乎 River 的病症给她带来的困扰。甚至许多年之后，John 认为自己不该对 River 有任何隐瞒，于是他就将自己当年表的动机告诉了 River。自此之后，River 开始以她一贯的特异的表达方式来表达她的感情。她剪了头发，并且开始疯狂地折纸兔子。这里我们机智的 Dr. Watts 又发表了个人感想：“ 然后她就发狂了，并开始做那些诡异的兔子，是吗？”。这确实像一个交流障碍症患者。</p><p><img src="http://i0.hdslb.com/bfs/article/2fa2d54e7f4aadca202379e860630644b6c3239c.png" alt="img"></p><p>​    现在，我们对 John 有了更深入的了解。John 的形象跌了一点，可也还不错。当他后来在交往过程中爱上了 River 之后，无怨无悔地为 River 付出。他对 River 的作为并不能理解，可面对 River 的坚持，他依然照办。至于 River，她的幸福此时也有了一点点不幸。</p><p>​    之后，我们再继续回溯 John 的记忆，发现 John 之前的记忆呈现黑暗和紊乱的状态。这种情况导致我们无法再继续探索。 Dr. Watts 和 Dr. Rosalence 只好基于现有的信息诱导修改 John 的记忆，帮他成去月球的愿望。如果对这个修改记忆的操作不理解可以参考这篇文章<a href="https://www.bilibili.com/read/cv1128664" target="_blank" rel="noopener">To the Moon 游戏设定介绍</a>。然而无论怎么诱导修改，John 之后的记忆演变都没有发生任何改变。最后，Dr. Rosalence 分析是因为我们还不了解 John 为什么想要到月球上去，这使得我们的诱导修改都没有对症下药。面对这种困境，Dr. Watts 和 Dr. Rosalence 想尽了办法终于回溯到了 John 的童年时期。</p><p>接下来就是游戏的高潮部分，所有的感动和泪水也都献给了这个部分。当我们回到 John 童年的时候，发现John 还有一个弟弟 Joey，这一点前面的故事也有很多伏笔。可不幸的是弟弟在院子里玩的时候，妈妈开车时没注意撞到了他。随着弟弟去世，妈妈精神有点失常，并且她给 John 服用了一些消除记忆的药物，好让他忘了这个悲惨的事情。这一切导致 John 的童年记忆难以到达。 在药物的作用下，John 忘记了许多东西，可那个重要的相遇和约定一直存在于 John 脑海的深层之处，只是受药物阻碍无法完整浮现出来。</p><p>随着记忆继续向前回溯，一次邂逅在我们面前展开。这是一个游乐园的场景，John 不想和妈妈、弟弟一起玩，就自己一个人在游乐园寻找有趣的地方，他找到了游乐园山上的一个平常没人去的角落。John在这里欣赏天上的星星。就在这时候，有一个小女孩也来到了这个地方。他们在非常惊讶，同时也很开心有一个人像自己一样来到了这个角落。小女孩的名字叫 River。也就是这一天，John 和 River 第一次相遇。John 是普通的 John，世界上有一大票人都叫 John；River 是特殊的 River，世界上没有几个人叫 River。普通的 John 和 特殊的 River 都喜欢这个角落，在这里他们一起看天上的星星，星星闪闪发光，星星就如同灯塔，向远方的灯塔传达交流的信息。无论是普通的 John 和 特殊的 River，他们一直以来只是以不同的形式保持孤独，但是，此时此刻他们都交到了朋友。</p><p><img src="http://i0.hdslb.com/bfs/article/603476bb36c2a11a7231c698a6e85316a9a6f5fc.png" alt="img"></p><p>​    他们发现了自定义的星座，一个兔子星座，而月亮就是这个兔子圆鼓鼓的肚子。</p><p><img src="http://i0.hdslb.com/bfs/article/f007c801ff21259e0d758da96f185d6850aeee17.png" alt="img"></p><p>​    在分别的时候，他们约定之后再见。“但是如果你忘记了或者走丢了呢？”，“那么我们一定会在月亮上相遇的，傻瓜！”</p><p><img src="http://i0.hdslb.com/bfs/article/330e4365f6d6d442905eee612cb189310cf417dc.png" alt="img"></p><p>​    发展至此，我们了解了故事的始末。一次简单的相遇，却是一生的缘分。再回首过往，所有的谜题都被解开。</p><p>​    John 之所以想去月球，是因为他们曾做了这样的约定，可惜 John 因为药物的影响，对这件事印象模糊了，可他记住了这个约定。“但是如果你忘记了或者走丢了呢？”，“那么我们一定会在月亮上相遇的，傻瓜！”。年老之后，River 因病先他而去。River不在身边之后，这个愿望自发地又浮现在脑海。</p><p>​    John 到中学之后，遇到了一个女孩，他爱上了这个女孩，却不知道为什么。然而他只是忘记了，就好像年老之时他想要去月球，却不知道为什么，现在他爱上了一个女孩，也不知道为什么。潜藏在记忆深处的东西自发地推动着他，让他爱上了这个女孩。“我不知道为什么爱上你，但是我一直有一种感觉：我爱你。” 看似狗血的表白理由，只是因为外人无法了解其内心的感受。</p><p>​    River 也不是若有若无的配角存在，她也不是稀里糊涂地接受了 John 的邀请，她一直在等，在等，等了许多年。感情之事，当局者清，旁观者迷。</p><p>​    John 之后一直深爱着 River，尝试所有办法来治好 River。可惜这个可怜的失忆的人不曾意识到自己的问题。“我倾尽一生想要治好你，却没有发现病人原来是自己”。</p><p>​    特殊的 River 更是一直深爱着 John，以她独特的方式。当 John 向她抛白中学时代的愧疚之后。River 剪了头发，因为他们第一次相见的时候，她是短发；她不断的折着纸兔子，因为那是他们的兔子星座；她宁愿放弃自己的治疗，也要在那个废弃的灯塔旁边盖起他们自己的房子，因为那灯塔就是他们相遇时的天上的星星。她所作的一切怪异的事情只是为了唤起 John 的记忆。</p><p>​    命运为幸福的人带来不幸，不幸的人却幸福地活着。</p><p>​    浅薄的言语永远无法表达游戏带来的感受，我推荐这款游戏，希望将这份感动送给你。<a href="https://www.bilibili.com/video/av31555731/?p=1" target="_blank" rel="noopener">To the Moon 游玩记录</a></p><p>​    游戏至此依然没有结束，之后的故事之后再说吧。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;​    这篇文章是在之前的一篇文章的基础上续写的。没有读过的读者可以看一下这篇之前的介绍文。&lt;a href=&quot;https://www.bilibili.com/read/cv1128664&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;To the Moon 游戏设定介绍&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;​    To the Moon 这款游戏的剧情设计非常精彩。在游戏中，我们会一点点回溯主人公 John 的记忆。随着对故事的一点一点地深入了解，我们会困惑，会误解，会略带嘲弄，也会略有所感。可是当我们最后看清故事始末，只剩下感动与泪水。&lt;/p&gt;
-&lt;p&gt;​    如果想要完整的体验游戏所展现的故事，可以观看下面的视频。&lt;/p&gt;
-&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=31555731&amp;cid=55173221&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;100%&quot; height=&quot;500&quot;&gt; &lt;/iframe&gt;
-    
-    </summary>
-    
-    
-      <category term="个人" scheme="https://n4a.github.io/tags/%E4%B8%AA%E4%BA%BA/"/>
-    
-      <category term="生活" scheme="https://n4a.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="To the Moon" scheme="https://n4a.github.io/tags/To-the-Moon/"/>
     
   </entry>
   

@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title>半监督学习笔记</title>
+      <link href="/2020/02/28/%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/02/28/%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<p>一些常见的半监督学习文章总结，包括纯半监督学习，直推学习，主动学习</p><a id="more"></a><div class="row">    <embed src="/pdf/semi.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 半监督学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>哈佛大学校长350周年校庆讲话（1636-1986）</title>
       <link href="/2019/12/27/%E5%93%88%E4%BD%9B%E5%A4%A7%E5%AD%A6%E6%A0%A1%E9%95%BF350%E5%91%A8%E5%B9%B4%E6%A0%A1%E5%BA%86%E8%AE%B2%E8%AF%9D%EF%BC%881636-1986%EF%BC%89/"/>
       <url>/2019/12/27/%E5%93%88%E4%BD%9B%E5%A4%A7%E5%AD%A6%E6%A0%A1%E9%95%BF350%E5%91%A8%E5%B9%B4%E6%A0%A1%E5%BA%86%E8%AE%B2%E8%AF%9D%EF%BC%881636-1986%EF%BC%89/</url>
@@ -51,9 +66,9 @@
       
         <tags>
             
-            <tag> session recommendation </tag>
-            
             <tag> Attention </tag>
+            
+            <tag> session recommendation </tag>
             
         </tags>
       
@@ -89,11 +104,11 @@
       
         <tags>
             
-            <tag> Attention </tag>
-            
             <tag> Recommender System </tag>
             
             <tag> Social Network </tag>
+            
+            <tag> Attention </tag>
             
         </tags>
       
